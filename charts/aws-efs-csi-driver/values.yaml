@@ -34,6 +34,8 @@ sidecars:
 
 imagePullSecrets: []
 
+volMetricsOptIn: false
+
 ## Controller deployment variables
 
 controller:
@@ -51,7 +53,6 @@ controller:
   # Enable if you want the controller to also delete the
   # path on efs when deleteing an access point
   deleteAccessPointRootDir: false
-  volMetricsOptIn: false
   podAnnotations: {}
   resources:
     {}

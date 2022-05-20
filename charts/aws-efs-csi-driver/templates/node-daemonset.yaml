@@ -69,6 +69,7 @@ spec:
             - --endpoint=$(CSI_ENDPOINT)
             - --logtostderr
             - --v={{ .Values.node.logLevel }}
+            - --vol-metrics-opt-in={{ default false .Values.volMetricsOptIn }}
           env:
             - name: CSI_ENDPOINT
               value: unix:/csi/csi.sock
